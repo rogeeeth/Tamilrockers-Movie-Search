@@ -4,22 +4,22 @@ import re
 
 '''This script takes a movie as an input and prints the Movie torrent download links'''
 
-def fetch_download(url):					#Function to fetch the torrent download link from the web page
+def fetch_download(url):						#Function to fetch the torrent download link from the web page
         data = requests.get(url)
         soup_data = BeautifulSoup(data.content, 'html.parser')
         elements = soup_data.find_all('a', title='Download attachment')
 
         return elements[0]['href']
 
-movie = input("Which Tamil movie do you want? ")		#Takes movie input as string
-movie = movie.strip().lower().split()					#Splits into different words(if more than one)
-movie = "-".join(movie)
-pattern = r"-"+movie+"-"
-results = []
+movie = input("Which Tamil movie do you want? ").strip()		#Takes movie input as string
+movie = movie..lower().split()						#Splits into different words(if more than one)
+movie = "-".join(movie)							#Joins the words using '-'
+pattern = r"-"+movie+"-"						#Saves the pattern as raw string
+results = []								#List to store the resulting links
 flag = 0
 count = 0
 
-for i in range(1,150):
+for i in range(1,200):
 	if i==1:
 		url = "http://tamilrockers.ws/index.php/forum/115-tamil-new-dvdrips-hdrips-bdrips-movies/?prune_day=100&sort_by=Z-A&sort_key=last_post&topicfilter=all"
 	else:
