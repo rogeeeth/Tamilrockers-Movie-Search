@@ -12,7 +12,7 @@ def fetch_download(url):					#Function to fetch the torrent download link from t
         return elements[0]['href']
 
 movie = input("Which Tamil movie do you want? ")		#Takes movie input as string
-movie = movie.lower().split()					#Splits into different words(if more than one)
+movie = movie.sprit().lower().split()					#Splits into different words(if more than one)
 movie = "-".join(movie)
 pattern = r"-"+movie+"-"
 results = []
