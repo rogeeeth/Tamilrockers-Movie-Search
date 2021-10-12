@@ -1,5 +1,6 @@
 class Solution:
     def isVowel(self,c):
+        #vowels in english
         if(c == 'a' or c=='e' or c=='i' or c=='o' or c=='u'):
             return True
         else:
