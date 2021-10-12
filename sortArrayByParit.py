@@ -1,6 +1,6 @@
 class Solution:
     def sortArrayByParity(self, A: List[int]) -> List[int]:
-        
+        ''' This function sorts by parity'''
         even =[]
         odd=[]
         
