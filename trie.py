@@ -13,6 +13,7 @@ class Trie:
         t.end = True
         
     def search(self, s):
+        ''' This is to search elements in Trie'''
         t = self
         for c in s:
             if t.child[ord(c)-ord('a')]==None: return False
