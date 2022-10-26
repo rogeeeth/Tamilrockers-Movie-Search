@@ -1,25 +1,25 @@
-# importing module
+#Importing Module
 from geopy.geocoders import Nominatim
 from timezonefinder import TimezoneFinder
   
-# initialize Nominatim API
+#Initialize Nominatim API
 geolocator = Nominatim(user_agent="geoapiExercises")
   
-# input as a geek
+#Input as a geek
 loc = input("Enter the location: ")
-print("Location address:", loc)
+print("Location address: ", loc)
   
-# getting Latitude and Longitud
+#Getting Latitude and Longitud
 location = geolocator.geocode(loc)
   
 print("Latitude and Longitude of the said address:")
 print((location.latitude, location.longitude))
   
-# pass the Latitude and Longitud
-# into a timezone_at
-# and it return timezone
+#Pass the Latitude and Longitud
+#Into a timezone_at
+#and it return timezone
 obj = TimezoneFinder()
   
-# returns 'Europe/Berlin'
-result = obj.timezone_at(lng=location.longitude, lat=location.latitude)
-print("Time Zone : ", result)
+#Returns 'Europe/Berlin'
+res = obj.timezone_at(lng=location.longitude, lat=location.latitude)
+print("Time Zone : ", res)
