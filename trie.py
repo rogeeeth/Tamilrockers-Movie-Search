@@ -4,9 +4,9 @@ class Trie:
         self.end = False
         self.child = [None]*26
         
-    def insert(self,s):
-        t =self
-        for c in s:
+    def insert(self,f):
+        t = self
+        for c in f:
             if t.child[ord(c)-ord('a')]==None:
                 t.child[ord(c)-ord('a')] =Trie()
             t = t.child[ord(c)-ord('a')]
